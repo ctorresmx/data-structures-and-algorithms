@@ -1,0 +1,10 @@
+//
+// Created by Carlos Torres on 8/1/20.
+//
+
+#ifndef DATASTRUCTURES_AND_ALGORITHMS_BUBBLE_SORT_H
+#define DATASTRUCTURES_AND_ALGORITHMS_BUBBLE_SORT_H
+
+int* bubble_sort(int*, int);
+
+#endif //DATASTRUCTURES_AND_ALGORITHMS_BUBBLE_SORT_H
