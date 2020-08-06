@@ -13,7 +13,7 @@ void swap(int *array, int v1, int v2) {
 }
 
 int* bubble_sort(int* unorderedArray, int length) {
-    int* orderedArray = malloc(sizeof(int));
+    int* orderedArray = malloc(sizeof(int) * length);
     memcpy(orderedArray, unorderedArray, length * sizeof(int));
 
     for (int i = 0; i < length; ++i) {
