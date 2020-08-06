@@ -3,4 +3,4 @@ project(data_structures_and_algorithms C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(data_structures_and_algorithms main.c bubble_sort.c bubble_sort.h util.c util.h)
+add_executable(data_structures_and_algorithms main.c bubble_sort.c bubble_sort.h util.c util.h merge_sort.c merge_sort.h)

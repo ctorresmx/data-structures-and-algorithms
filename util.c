@@ -27,9 +27,8 @@ void runSortingFunction(int *(*sortingFunction) (int*, int), char *sortingFuncti
     printf("%s:\n", sortingFunctionName);
 
     clock_t t = clock();
-    int* orderedArray = sortingFunction(unorderedArray, length);
+    sortingFunction(unorderedArray, length);
     double elapsedTime = ((float) (clock() - t) / CLOCKS_PER_SEC);
 
-    printArray(orderedArray, length);
-    printf("%s took %f seconds to run.\n", sortingFunctionName, elapsedTime);
+    printf("It took %f seconds to run.\n\n", elapsedTime);
 }

@@ -4,9 +4,10 @@
 #include <stdio.h>
 
 #include "bubble_sort.h"
+#include "merge_sort.h"
 #include "util.h"
 
-#define ARRAY_SIZE 50000
+#define ARRAY_SIZE 5
 
 int main() {
     int *unorderedArray = createRandomArray(ARRAY_SIZE);
@@ -16,6 +17,7 @@ int main() {
     printf("\n");
 
     runSortingFunction(&bubble_sort, "Bubble Sort", unorderedArray, ARRAY_SIZE);
+    runSortingFunction(&merge_sort, "Merge Sort", unorderedArray, ARRAY_SIZE);
 
     return 0;
 }
