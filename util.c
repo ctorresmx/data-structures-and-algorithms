@@ -23,11 +23,11 @@ void printArray(const int* array, int length) {
     printf("]\n");
 }
 
-void runSortingFunction(int *(*sortingFunction) (int*, int), char *sortingFunctionName, int *unorderedArray, int length) {
-    printf("%s:\n", sortingFunctionName);
+void runSortingFunction(Algorithm algorithm, int *unorderedArray, int length) {
+    printf("%s:\n", algorithm.name);
 
     clock_t t = clock();
-    sortingFunction(unorderedArray, length);
+    algorithm.sortingFunction(unorderedArray, length);
     double elapsedTime = ((float) (clock() - t) / CLOCKS_PER_SEC);
 
     printf("It took %f seconds to run.\n\n", elapsedTime);

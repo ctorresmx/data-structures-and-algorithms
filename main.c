@@ -9,6 +9,11 @@
 
 #define ARRAY_SIZE 5
 
+const Algorithm algorithms[2] = {
+        { .name = "Bubble Sort", .sortingFunction = &bubble_sort },
+        { .name = "Merge Sort", .sortingFunction = &merge_sort },
+};
+
 int main() {
     int *unorderedArray = createRandomArray(ARRAY_SIZE);
 
@@ -16,8 +21,9 @@ int main() {
     printArray(unorderedArray, ARRAY_SIZE);
     printf("\n");
 
-    runSortingFunction(&bubble_sort, "Bubble Sort", unorderedArray, ARRAY_SIZE);
-    runSortingFunction(&merge_sort, "Merge Sort", unorderedArray, ARRAY_SIZE);
+    for (int i = 0; i < sizeof(algorithms) / sizeof(Algorithm); ++i) {
+        runSortingFunction(algorithms[i], unorderedArray, ARRAY_SIZE);
+    }
 
     return 0;
 }
