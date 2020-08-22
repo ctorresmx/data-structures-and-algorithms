@@ -1,0 +1,10 @@
+//
+// Created by Carlos Torres on 8/15/20.
+//
+
+#ifndef DATA_STRUCTURES_AND_ALGORITHMS_MERGE_SORT_OPENMP_H
+#define DATA_STRUCTURES_AND_ALGORITHMS_MERGE_SORT_OPENMP_H
+
+int* merge_sort_openmp(int*, int);
+
+#endif //DATA_STRUCTURES_AND_ALGORITHMS_MERGE_SORT_OPENMP_H
