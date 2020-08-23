@@ -13,5 +13,7 @@ typedef struct algorithm {
 int *createRandomArray(int);
 void printArray(const int*, int);
 void runSortingFunction(Algorithm, int*, int);
+int* copy_array(int*, int, int);
+int* naive_merge(const int*, const int*, int, int);
 
 #endif //DATASTRUCTURES_AND_ALGORITHMS_UTIL_H
