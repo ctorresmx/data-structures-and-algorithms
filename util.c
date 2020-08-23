@@ -9,6 +9,8 @@
 
 #include "util.h"
 
+const int PRINT_ARRAY_THRESHOLD = 5;
+
 int *createRandomArray(int length) {
     int *array = malloc(sizeof(int) * length);
     for (int i = 0; i < length; ++i) {
@@ -18,19 +20,23 @@ int *createRandomArray(int length) {
 }
 
 void printArray(const int* array, int length) {
-    printf("[");
-    for (int i = 0; i < length; ++i) {
-        printf("%i ", *(array + i));
+    if (length <= PRINT_ARRAY_THRESHOLD) {
+        printf("[");
+        for (int i = 0; i < length; ++i) {
+            printf("%i ", *(array + i));
+        }
+        printf("]\n");
     }
-    printf("]\n");
 }
 
 void runSortingFunction(Algorithm algorithm, int *unorderedArray, int length) {
     printf("%s:\n", algorithm.name);
 
     clock_t t = clock();
-    algorithm.sortingFunction(unorderedArray, length);
+    const int* result = algorithm.sortingFunction(unorderedArray, length);
     double elapsedTime = ((float) (clock() - t) / CLOCKS_PER_SEC);
+
+    printArray(result, length);
 
     printf("It took %f seconds to run.\n\n", elapsedTime);
 }
